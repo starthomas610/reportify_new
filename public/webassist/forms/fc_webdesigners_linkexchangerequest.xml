@@ -1,0 +1,14 @@
+<wa_form name="Link Exchange Request" id="LinkExchangeRequest" submit_text="Submit Request" send_mail="false" use_upload="true">
+	<wa_form_fieldset label="Link Exchange Request" id="Registration">
+		<wa_fieldset_description>Required *</wa_fieldset_description>
+		<wa_form_line>
+			<wa_form_group_reference group="Webdesign.xml" src="Linkexchangerequestinfo.xml" label="Information" continueLine="false" />
+		</wa_form_line>
+		<wa_form_line>
+			<wa_form_group_reference group="Webdesign.xml" src="Linkexchangerequestpageranks.xml" label="Google page rank" continueLine="false" />
+		</wa_form_line>
+		<wa_form_line>
+			<wa_form_group_reference group="Webdesign.xml" src="Linkexchangerequestcomments.xml" label="" continueLine="false" />
+		</wa_form_line>
+	</wa_form_fieldset>
+</wa_form>
