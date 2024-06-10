@@ -178,7 +178,7 @@
                             </div>
                             <div class="col-lg-3">
                                 <div class="card card-body">
-                                    <a href="<?php echo USERAREA_PATH; ?>importify/importify.php">
+                                    <a href="<?php echo USERAREA_PATH; ?>importify/importifydashboard.php">
                                         <div class="alert alert-success alert-dismissible fade show px-4 mb-0 text-center" role="alert">
                                             <i class="mdi mdi-database-import d-block display-4 mt-2 mb-3 text-success"></i>
                                             <h5 class="text-primary"><?php echo $importify; ?></h5>

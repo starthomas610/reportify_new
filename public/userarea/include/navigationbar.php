@@ -74,6 +74,18 @@
                     </li>
                 <?php } ?>
 
+                <?php if (in_array(6, $activemod)) { ?>
+                    <li class="has_sub">
+                        <a href="javascript:void(0);" class="waves-effect"><i class="bx bxl-product-hunt"></i> <span> Importify </span> <span class="float-right"><i class="mdi mdi-chevron-right"></i></span></a>
+                        <ul class="list-unstyled">
+                            <li><a href="<?php echo USERAREA_PATH; ?>importify/importifydashboard.php">Importify Dashboard</a></li>
+                            <li><a href="<?php echo USERAREA_PATH; ?>importify/insert-importifytemplate.php">New Import Templates</a></li>
+                            <li><a href="">Import files</a></li>
+                            <li><a href="">Import History</a></li>
+                        </ul>
+                    </li>
+                <?php } ?>
+
                 <?php if (in_array(4, $activemod)) { ?>
                     <li class="has_sub">
                         <a href="javascript:void(0);" class="waves-effect"><i class="bx bxl-product-hunt"></i> <span> <?php echo $products; ?> </span> <span class="float-right"><i class="mdi mdi-chevron-right"></i></span></a>
