@@ -274,4 +274,6 @@ $maillist="Mail List";
 $newsletterlist="Newsletter List";
 $insertanalysisinfo="Please insert the name and description of the new analysis.";
 $insertanalysisalert="Please remember to check if your analysis is already present into the analysis preset of easySPEC";
+$logoutbutton="Logout";
+$userprofile="User Profile";
 ?>

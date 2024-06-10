@@ -1,0 +1,14 @@
+$idcompanies_lang="idcompanies";
+$companies_name_lang="Name";
+$companies_address_lang="Address";
+$companies_city_lang="City";
+$companies_phone_lang="Phone";
+$companies_email_lang="Email";
+$companies_vat_lang="Vat";
+$companies_grade_lang="Grade";
+$companies_website_lang="Website";
+$companies_zip_lang="Zip";
+$companies_category_id_lang="Category";
+$companies_createdat_lang="Create at";
+$companies_updateat_lang="Update at";
+$company_id_lang="company_id";
