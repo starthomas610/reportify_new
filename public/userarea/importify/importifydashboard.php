@@ -113,8 +113,9 @@
                                         <h5 class="header-title pb-3 mt-0">Importify: <?php echo $dashboard; ?></h5>
                                         <a class="btn btn-primary" href="insert-importifytemplate.php" role="button">Insert new template</a>
                                         <a class="btn btn-success" href="rsl-category.php" role="button">Import File</a>
-                                        <a href="component.php"><button type="button" class="btn btn-info w-md waves-effect waves-light">Hystory Import</button></a>
-                                        <a href="standards.php"><button type="button" class="btn btn-danger w-md waves-effect waves-light">Dasboard</button></a>
+                                        <a href=""><button type="button" class="btn btn-info w-md waves-effect waves-light">Hystory Import</button></a>
+                                        <a href="importifydashboard.php"><button type="button" class="btn btn-pink w-md waves-effect waves-light">Importify Dasboard</button></a>
+                                        <a href="dashboard.php"><button type="button" class="btn btn-danger w-md waves-effect waves-light">Reportify Dasboard</button></a>
 
 
                                         <br><br>
@@ -153,10 +154,18 @@
 
 
                                                             <td>
-                                                                <a href="synoptic-table.php?idrsl=<?php echo ($templateimportify->getColumnVal("idimporttemplates")); ?>"><button type="button" class="btn btn-success waves-effect waves-light" data-toggle="tooltip" title="Synoptic Table"><i class="bx bx-table font-size-16 align-middle"></i></button></a>
-                                                                <a class="btn btn-success" href="material-rsl.php?id=<?php echo ($templateimportify->getColumnVal("idimporttemplates")); ?>" role="button" data-toggle="tooltip" title="Go"><i class="fas fa-angle-double-right font-size-16 align-middle"></i></a>
+                                                                <a href="columnlink.php?idimporttemplates=<?php echo ($templateimportify->getColumnVal("idimporttemplates")); ?>">
+                                                                    <button type="button" class="btn btn-info waves-effect waves-light" data-toggle="tooltip" title="Associate Columns">
+                                                                        <i class="fas fa-project-diagram font-size-16 align-middle"></i>
+                                                                    </button>
+                                                                </a>
+                                                                <a class="btn btn-warning" href="update-importifytemplate.php?idimporttemplates=<?php echo ($templateimportify->getColumnVal("idimporttemplates")); ?>" role="button" data-toggle="tooltip" title="Go">
+                                                                    <i class="fas fa-pencil-alt font-size-16 align-middle"></i>
+                                                                </a>
 
-                                                                <a class="btn btn-danger canc-btn" href="cancel-rsl.php?id=<?php echo ($templateimportify->getColumnVal("idimporttemplates")); ?>" role="button" data-toggle="tooltip" title="Delete"><i class="fas fa-trash font-size-16 align-middle"></i></a>
+                                                                <a class="btn btn-danger canc-btn" href="cancel-importifytemplate.php?idimporttemplates=<?php echo ($templateimportify->getColumnVal("idimporttemplates")); ?>" role="button" data-toggle="tooltip" title="Delete">
+                                                                    <i class="fas fa-trash font-size-16 align-middle"></i>
+                                                                </a>
 
                                                             </td>
 
@@ -170,6 +179,33 @@
                                                     ?></tbody>
                                             </table>
                                         </div><!--end table-responsive-->
+                                        <script>
+                                            document.addEventListener('DOMContentLoaded', function() {
+                                                const deleteButtons = document.querySelectorAll('.canc-btn');
+
+                                                deleteButtons.forEach(button => {
+                                                    button.addEventListener('click', function(event) {
+                                                        event.preventDefault(); // Previene il comportamento predefinito del link
+                                                        const href = this.getAttribute('href');
+
+                                                        Swal.fire({
+                                                            title: 'Are you sure?',
+                                                            text: 'Do you want to cancel the import template?',
+                                                            icon: 'warning',
+                                                            showCancelButton: true,
+                                                            confirmButtonColor: '#3085d6',
+                                                            cancelButtonColor: '#d33',
+                                                            confirmButtonText: 'Yes, cancel it!',
+                                                            cancelButtonText: 'No, keep it'
+                                                        }).then((result) => {
+                                                            if (result.isConfirmed) {
+                                                                window.location.href = href;
+                                                            }
+                                                        });
+                                                    });
+                                                });
+                                            });
+                                        </script>
 
                                     </div>
                                 </div>
